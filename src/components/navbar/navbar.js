@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         page.classList.add('menuopen');
     });
 
-    let links = document.querySelectorAll('a[href^="#"]');
+    let links = document.querySelectorAll('a[to^="#"]');
 
     links.forEach(function(link) {
         link.addEventListener('click', function(event) {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
 
             // Get the target element
-            let targetId = this.getAttribute('href');
+            let targetId = this.getAttribute('to');
             let targetElement = document.querySelector(targetId);
 
             // Smooth scroll to target
@@ -40,6 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     behavior: 'smooth'
                 });
             }
+
+            page.classList.remove('menuopen');
+            page.classList.add('menuopen');
         });
     });
 });
