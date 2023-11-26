@@ -1,15 +1,46 @@
+@font-face {
+  font-family: 'CodeNext-Regular';
+  src: url('./fonts/CodeNext-Trial-Regular.woff2') format('woff2'),
+  url('./fonts/CodeNext-Trial-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CodeNext-Bold';
+  src: url('./fonts/CodeNext-Trial-Bold.woff2') format('woff2'),
+  url('./fonts/CodeNext-Trial-Bold.woff2') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CodeNext-Thin';
+  src: url('./fonts/CodeNext-Trial-Thin.woff2') format('woff2'),
+  url('./fonts/CodeNext-Trial-Thin.woff2') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+h1, h2 {
+  font-family: 'CodeNext-Bold', sans-serif;
+}
+
+p {
+  font-family: 'CodeNext-Thin', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
+  font-family: 'CodeNext-Regular', sans-serif;
 }
 
-body {margin: 0;
+body {
+  margin: 0;
   line-height: 1.6;
   color: #fff;
-  //background: #000;
-  font-size: 18px;
-  font-weight: 400;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Roboto", "Helvetica Neue", sans-serif !important;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -30,30 +61,30 @@ body {margin: 0;
 &.menuopen {
    opacity: .6;
    filter: blur(20px);
-   transform: scale(1.2);
+   //transform: scale(1.2);
  }
 }
 
 section {
   display: flex;
-  min-height: 100vh;
-  padding: 50px;
   justify-content: center;
   align-items: center;
-  background: #222;
   color: #fff;
-  position: relative;
+  //height: 100vh;
+  //padding: 50px;
+  //background: #222;
+  //position: relative;
 
-&:after {
-   content: "";
-   position: absolute;
-   left: 0;
-   top: 0;
-   background: #000;
-   opacity: .5;
-   height: 100%;
-   width: 100%;
- }
+//&:after {
+//   content: "";
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   background: #000;
+//   opacity: .5;
+//   height: 100%;
+//   width: 100%;
+// }
 
 h1 {
   font-size: 120px;
@@ -64,14 +95,15 @@ h1 {
 }
 
 header {
-  z-index: 99999;
-  position: absolute;
-  top: 0;
-  left: 0;
+  //z-index: 99999;
+  //position: absolute;
+  //top: 0;
+  //left: 0;
 
 #logo {
+  z-index: 99999;
   position: fixed;
-  top: 30px;
+  top: 50px;
   left: 0;
   right: 0;
   width: 100px;
@@ -204,4 +236,86 @@ a {
   font-weight: 700;
   letter-spacing: 1px;
   padding: 20px;
+}
+
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-wrapper {
+  margin-top: 9rem;
+  max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid rgba(138,103,138,1);
+  border-radius: 16px;
+  //background: rgba(190, 190, 190, 0.8);
+  backdrop-filter: blur(3px);
+
+  -webkit-box-shadow: 22px 22px 57px -20px rgba(138,103,138,1);
+  -moz-box-shadow: 22px 22px 57px -20px rgba(138,103,138,1);
+  box-shadow: 22px 22px 57px -20px rgba(138,103,138,1);
+}
+
+.card-wrapper > * {
+  margin-bottom: 8px;
+}
+
+.avatar {
+  display: block;
+  margin: -60px auto 10px ;
+  max-width: 170px;
+  border-radius: 32px;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-text-thin {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'CodeNext-Thin', sans-serif;
+  font-size: 14px;
+  max-width: 90%;
+}
+
+.card-text-bold {
+  font-family: 'CodeNext-Bold', sans-serif;
+  text-align: center;
+}
+
+.contacts-list {
+  display: flex;
+  list-style: none;
+}
+
+.contacts-list-item {
+  width: 80px;
+  padding: 5px;
+  border: 1px solid rgba(138,103,138,1);
+  border-radius: 8px;
+}
+
+.contacts-list-item:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.item-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-img {
+  margin-bottom: 8px;
 }
