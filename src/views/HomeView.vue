@@ -17,6 +17,7 @@
             </a>
           </li>
         </ul>
+        <button class="download-btn">Скачать резюме</button>
       </main>
     </div>
   </section>
