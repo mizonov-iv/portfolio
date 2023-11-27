@@ -327,3 +327,35 @@ a {
   border: none;
   border-radius: 8px;
 }
+
+
+//ANIMATION
+
+.block {
+  margin-top: 9rem;
+  opacity: 0; /* задаем начальное состояние блока */
+  transition: opacity 4s; /* указываем время анимации - 0.5 секунды */
+  display: flex;
+}
+
+.block > * {
+  width: 50%;
+}
+
+.block {
+  padding: 50px;
+  opacity: 0;
+  transform: translateY(-80px) translateX(-80px);
+  animation: ani 3s forwards;
+}
+
+@keyframes ani {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px) translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
