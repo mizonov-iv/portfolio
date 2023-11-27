@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'CodeNext-Regular';
+    src: url('./fonts/CodeNext-Trial-Regular.woff2') format('woff2'),
+    url('./fonts/CodeNext-Trial-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CodeNext-Bold';
+    src: url('./fonts/CodeNext-Trial-Bold.woff2') format('woff2'),
+    url('./fonts/CodeNext-Trial-Bold.woff2') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CodeNext-Thin';
+    src: url('./fonts/CodeNext-Trial-Thin.woff2') format('woff2'),
+    url('./fonts/CodeNext-Trial-Thin.woff2') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+h1, h2 {
+    font-family: 'CodeNext-Bold', sans-serif;
+}
+
+p {
+    font-family: 'CodeNext-Thin', sans-serif;
+}

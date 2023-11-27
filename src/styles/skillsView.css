@@ -1,0 +1,42 @@
+.skills-section {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: ani 3s forwards;
+}
+
+.skills-list {
+    display: flex;
+    padding-top: 10px;
+}
+
+.skills-list-item {
+
+}
+
+.skills-list-item:not(:last-child) {
+    margin-right: 15px;
+}
+
+@keyframes ani {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px) translateX(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+.raise {
+    transition: all 0.5s ease-in-out;
+    border-radius: 11px;
+}
+
+.raise:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em #ffa260;
+    transform: translateY(-0.3em) scale(1.1);
+    transition: all 0.5s ease-in-out;
+}

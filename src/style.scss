@@ -1,39 +1,14 @@
-@font-face {
-  font-family: 'CodeNext-Regular';
-  src: url('./fonts/CodeNext-Trial-Regular.woff2') format('woff2'),
-  url('./fonts/CodeNext-Trial-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'CodeNext-Bold';
-  src: url('./fonts/CodeNext-Trial-Bold.woff2') format('woff2'),
-  url('./fonts/CodeNext-Trial-Bold.woff2') format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'CodeNext-Thin';
-  src: url('./fonts/CodeNext-Trial-Thin.woff2') format('woff2'),
-  url('./fonts/CodeNext-Trial-Thin.woff2') format('woff');
-  font-weight: 300;
-  font-style: normal;
-}
-
-h1, h2 {
-  font-family: 'CodeNext-Bold', sans-serif;
-}
-
-p {
-  font-family: 'CodeNext-Thin', sans-serif;
-}
+@import url('./styles/typography.css');
+@import url('./styles/skillsView.css');
 
 * {
   margin: 0;
   padding: 0;
   font-family: 'CodeNext-Regular', sans-serif;
+}
+
+ul {
+  list-style: none;
 }
 
 body {
@@ -57,6 +32,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
+  padding-top: 10rem;
 
 &.menuopen {
    opacity: .6;
@@ -66,10 +42,10 @@ body {
 }
 
 section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  //color: #fff;
   //height: 100vh;
   //padding: 50px;
   //background: #222;
@@ -242,23 +218,23 @@ a {
 .main-section {
   display: flex;
   flex-direction: column;
-}
-
-.card-wrapper {
-  margin-top: 9rem;
-  max-width: 375px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 10px;
+  //padding-top: 9rem;
+  max-width: 375px;
+  margin: 0 auto;
+  //padding: 10px;
   border: 1px solid rgba(138,103,138,1);
   border-radius: 16px;
-  //background: rgba(190, 190, 190, 0.8);
   backdrop-filter: blur(3px);
 
   -webkit-box-shadow: 22px 22px 57px -20px rgba(138,103,138,1);
   -moz-box-shadow: 22px 22px 57px -20px rgba(138,103,138,1);
   box-shadow: 22px 22px 57px -20px rgba(138,103,138,1);
+}
+
+.card-wrapper {
+  //margin-top: 9rem;
+
 }
 
 .card-wrapper > * {
@@ -332,7 +308,7 @@ a {
 //ANIMATION
 
 .block {
-  margin-top: 9rem;
+  //margin-top: 9rem;
   opacity: 0; /* задаем начальное состояние блока */
   transition: opacity 4s; /* указываем время анимации - 0.5 секунды */
   display: flex;
@@ -349,20 +325,3 @@ a {
   animation: ani 3s forwards;
 }
 
-@keyframes ani {
-  0% {
-    opacity: 0;
-    transform: translateY(-40px) translateX(-40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0px);
-  }
-}
-
-.raise:hover,
-.raise:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em #ffa260;
-  transform: translateY(-0.25em);
-  transition: all 1s;
-}

@@ -14,7 +14,6 @@
       </button>
     </nav>
   </header>
-
 </template>
 
 <script setup>
