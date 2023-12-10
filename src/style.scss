@@ -1,5 +1,6 @@
 @import url('./styles/typography.css');
 @import url('./styles/skillsView.css');
+@import url('./styles/portfolioView.css');
 
 * {
   margin: 0;
@@ -9,6 +10,11 @@
 
 ul {
   list-style: none;
+  cursor: default;
+}
+
+.paragraph {
+  font-family: 'CodeNext-Bold', sans-serif;
 }
 
 body {
@@ -214,14 +220,14 @@ a {
   padding: 20px;
 }
 
-
 .main-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  //padding-top: 9rem;
-  max-width: 375px;
   margin: 0 auto;
+  //margin-top: 9rem;
+  max-width: 375px;
+
   //padding: 10px;
   border: 1px solid rgba(138,103,138,1);
   border-radius: 16px;
@@ -303,25 +309,3 @@ a {
   border: none;
   border-radius: 8px;
 }
-
-
-//ANIMATION
-
-.block {
-  //margin-top: 9rem;
-  opacity: 0; /* задаем начальное состояние блока */
-  transition: opacity 4s; /* указываем время анимации - 0.5 секунды */
-  display: flex;
-}
-
-.block > * {
-  width: 50%;
-}
-
-.block {
-  padding: 50px;
-  opacity: 0;
-  transform: translateY(-80px) translateX(-80px);
-  animation: ani 3s forwards;
-}
-

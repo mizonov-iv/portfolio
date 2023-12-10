@@ -1,25 +1,60 @@
 <template>
   <section class="">
-    <div class="block">
-
-      <div>
-        <h2>VIDEO</h2>
-      </div>
-      <div>
-        <p class="card-text-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cum cupiditate delectus deleniti dicta distinctio dolore dolorem doloribus error excepturi exercitationem explicabo facilis impedit in laboriosam magnam minus nam, nostrum numquam pariatur porro quia quis quisquam repudiandae sed suscipit, vel?</p>
-      </div>
-
-    </div>
-
+    <ul class="project-list">
+      <li
+          class="project-list-item"
+          v-for="item in worksLost"
+          :key="item.id"
+          @click="selectedProjectID = item.id"
+      >
+        {{item.title}}
+      </li>
+    </ul>
+    <ProjectItem :project="worksLost[selectedProjectID]"/>
   </section>
 </template>
 
-<script>
-export default {
-  name: "PortfolioViews"
-}
+<script setup>
+import {ref} from "vue";
+import ProjectItem from "../components/ProjectItem.vue";
+
+const selectedProjectID = ref(0)
+
+const worksLost = ref([
+  {
+    id: 0,
+    title: "Vue-Blog",
+    img_url: "blog",
+    text: [
+      "Vue.js Composition API + TypeScript",
+      "Pinia",
+      "Basic server with Node.js + Express",
+      "Real authentication and authorization using jsonwebtoken (JWT)"
+    ]
+  },
+  {
+    id: 1,
+    title: "Advance"
+  },
+  {
+    id: 2,
+    title: "Eda1"
+  },
+  {
+    id: 3,
+    title: "NASA"
+  },
+  {
+    id: 4,
+    title: "Books"
+  },
+  {
+    id: 5,
+    title: "GitHub users"
+  },
+  {
+    id: 6,
+    title: "Trello"
+  },
+])
 </script>
-
-<style scoped>
-
-</style>

@@ -1,0 +1,48 @@
+
+.project-list {
+    display: flex;
+    justify-content: center;
+}
+
+.project-list-item {
+    margin-right: 8px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+
+    font-size: 1.2rem;
+}
+
+.project-list-item:hover {
+    border-bottom: 2px solid #ffffff;
+}
+
+.demo-img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+
+
+/*ANIMATION*/
+
+.block {
+    /*margin-top: 9rem;*/
+    opacity: 0; /* задаем начальное состояние блока */
+    transition: opacity 4s; /* указываем время анимации - 0.5 секунды */
+    display: flex;
+    justify-content: space-between;
+}
+
+.block > * {
+    width: 45%;
+    margin-right: 8px;
+    padding: 10px;
+}
+
+.block {
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(-80px) translateX(-80px);
+    animation: ani 3s forwards;
+}
