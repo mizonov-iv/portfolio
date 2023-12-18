@@ -10,6 +10,8 @@
           <p class="card-text-bold">{{icon.title}}</p>
         </li>
       </ul>
+
+
     </main>
   </section>
 </template>
