@@ -10,13 +10,8 @@
       <span></span>
     </button>
     <nav class="navigation" :class="{open: navIsOpen}">
-      <ul
-          class="nav-list"
-          v-show="navIsOpen"
-          v-for="link in navLinks"
-          :key="link"
-      >
-        <li class="nav-list-item">
+      <ul class="nav-list">
+        <li class="nav-list-item" v-for="link in navLinks" :key="link">
           <router-link class="item-link" :to="link.path">
             {{ link.name }}
           </router-link>

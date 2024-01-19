@@ -13,7 +13,6 @@
           <li class="contacts-list-item" v-for="item in contacts" :key="item.id">
             <a class="item-link" :href="item.url">
               <img class="item-img" :src="`/src/assets/icons/${item.img_url}.png`" :alt="item.title">
-              <p class="card-text-bold">{{item.title}}</p>
             </a>
           </li>
         </ul>

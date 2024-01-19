@@ -1,20 +1,21 @@
 .header {
-padding: .5rem;
+    padding: .5rem;
 }
 
 .navigation {
-    position: fixed;
-    top: -1rem;
-    left: 0;
+    position: absolute;
+    top: 3rem;
+    left: -375px;
     color: #FFFFFF;
     padding: 1rem;
-    width: 100%;
-    z-index: 100;
+    width: 375px;
+    height: auto;
+    z-index: 1000;
+    transition: transform .5s;
 }
 
 .navigation.open {
-    backdrop-filter: blur(3px);
-        transform: translateY(4rem);
+    transform: translateX(100%);
 }
 
 .burger {
@@ -24,6 +25,7 @@ padding: .5rem;
     border: none;
     background-color: transparent;
     z-index: 2;
+    cursor: pointer;
 }
 
 .burger span {
@@ -65,9 +67,16 @@ padding: .5rem;
     margin-bottom: .5rem;
     border: 1px solid #FFFFFF;
     border-radius: 10px;
-    background: #000000;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
 }
 
 .item-link {
     text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+    .burger {
+        margin: 0 auto;
+    }
 }
