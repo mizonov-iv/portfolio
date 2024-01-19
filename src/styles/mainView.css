@@ -1,0 +1,86 @@
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-section {
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding: 1rem 0;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #FFFFFF;
+    border-radius: 16px;
+    backdrop-filter: blur(3px);
+    color: #FFFFFF;
+}
+
+.card-wrapper > * {
+    margin-bottom: 8px;
+}
+
+.avatar {
+    display: block;
+    margin: 0 auto;
+    max-width: 170px;
+    border-radius: 32px;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-text-thin {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'CodeNext-Thin', sans-serif;
+    font-size: 14px;
+    max-width: 90%;
+}
+
+.card-text-bold {
+    font-family: 'CodeNext-Bold', sans-serif;
+    text-align: center;
+}
+
+.contacts-list {
+    display: flex;
+    list-style: none;
+}
+
+.contacts-list-item {
+    width: 80px;
+    padding: 5px;
+    border: 1px solid rgba(138,103,138,1);
+    border-radius: 8px;
+}
+
+.contacts-list-item:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+.item-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-img {
+    margin-bottom: 8px;
+}
+
+.download-btn {
+    display: block;
+    margin: 16px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}

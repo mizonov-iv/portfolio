@@ -1,12 +1,10 @@
 <template>
-  <Navbar/>
-  <div id="page" class="">
+  <div class="app-wrapper">
+    <Navbar/>
     <RouterView></RouterView>
   </div>
 </template>
 
 <script setup>
-import './components/navbar/navbar.js'
-import Navbar from "./components/navbar/Navbar.vue"
-
+import Navbar from "./components/Navbar.vue"
 </script>

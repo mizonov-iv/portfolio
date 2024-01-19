@@ -1,0 +1,73 @@
+.header {
+padding: .5rem;
+}
+
+.navigation {
+    position: fixed;
+    top: -1rem;
+    left: 0;
+    color: #FFFFFF;
+    padding: 1rem;
+    width: 100%;
+    z-index: 100;
+}
+
+.navigation.open {
+    backdrop-filter: blur(3px);
+        transform: translateY(4rem);
+}
+
+.burger {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.burger span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #FFFFFF;
+    left: 5px;
+    transition: transform .5s, opacity .5s, background-color .5s;
+}
+
+.burger span:nth-child(1) {
+    transform: translateY(-10px);
+}
+
+.burger span:nth-child(3) {
+    transform: translateY(10px);
+}
+
+.burger.open span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.burger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-list-item {
+    padding: 1rem;
+    margin-bottom: .5rem;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    background: #000000;
+}
+
+.item-link {
+    text-decoration: none;
+}
