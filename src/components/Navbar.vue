@@ -3,7 +3,7 @@
     <button
         class="burger"
         :class="{open: navIsOpen}"
-        @click.prevent="toggleNavBar"
+        @click="toggleNavBar"
     >
       <span></span>
       <span></span>
@@ -12,7 +12,7 @@
     <nav class="navigation" :class="{open: navIsOpen}">
       <ul class="nav-list">
         <li class="nav-list-item" v-for="link in navLinks" :key="link">
-          <router-link class="item-link" :to="link.path">
+          <router-link class="link" :to="link.path" @click="toggleNavBar">
             {{ link.name }}
           </router-link>
         </li>

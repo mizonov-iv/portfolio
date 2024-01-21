@@ -1,86 +1,68 @@
-.main-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
+/*Домашняя страница*/
 .main-section {
     margin: 0 auto;
-    margin-top: 4rem;
+    margin-top: 3rem;
     padding: 1rem 0;
     max-width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 1px solid #FFFFFF;
-    border-radius: 16px;
+    border-radius: 10px;
     backdrop-filter: blur(3px);
     color: #FFFFFF;
 }
 
-.card-wrapper > * {
+.main-section > * {
+    margin-bottom: 1rem;
+}
+
+.main-section__img {
+    max-width: 170px;
+    border-radius: 10px;
+}
+
+.main-section__text > * {
     margin-bottom: 8px;
 }
 
-.avatar {
-    display: block;
-    margin: 0 auto;
-    max-width: 170px;
-    border-radius: 32px;
-}
-
-.card-title {
+.main-section__title {
     text-align: center;
 }
 
-.card-text-thin {
-    display: block;
-    margin: 0 auto;
+.main-section__paragraph {
     text-align: center;
-    font-family: 'CodeNext-Thin', sans-serif;
-    font-size: 14px;
-    max-width: 90%;
+    font-size: 20px;
+    font-weight: 500;
 }
 
-.card-text-bold {
-    font-family: 'CodeNext-Bold', sans-serif;
-    text-align: center;
-}
-
-.contacts-list {
+.main-section__contacts-list {
     display: flex;
     list-style: none;
 }
 
-.contacts-list-item {
+.main-section__contacts-list-item {
     width: 60px;
     height: 60px;
     padding: 5px;
     border-radius: 8px;
 }
 
-.contacts-list-item:not(:last-child) {
+.main-section__contacts-list-item:not(:last-child) {
     margin-right: 10px;
 }
 
-.item-link {
+.link {
     cursor: pointer;
     text-decoration: none;
     color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-.item-img {
+.main-section__contacts-list-img {
     margin-bottom: 8px;
+    transition: all .3s;
 }
 
-.download-btn {
-    display: block;
-    margin: 16px auto;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
+.main-section__contacts-list-img:hover {
+    scale: 1.1;
 }

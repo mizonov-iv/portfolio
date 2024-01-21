@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue"
 import SkillsView from "../views/SkillsView.vue"
 import PortfolioView from "../views/PortfolioView.vue";
 import ContactsView from "../views/ContactsView.vue";
+import ComponentsView from "../views/ComponentsView.vue"
 
 export const router = createRouter({
     history: createWebHistory(),
@@ -22,6 +23,10 @@ export const router = createRouter({
         {
             path: "/contacts",
             component: ContactsView
+        },
+        {
+            path: "/components",
+            component: ComponentsView
         },
     ]
 })

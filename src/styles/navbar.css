@@ -69,6 +69,7 @@
     border-radius: 10px;
     backdrop-filter: blur(10px);
     cursor: pointer;
+    text-align: center;
 }
 
 .item-link {
