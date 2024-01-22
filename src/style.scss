@@ -5,6 +5,10 @@
 @import url('./styles/portfolioView.css');
 @import url('./styles/navbar.css');
 
+:root {
+  --base-color: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -1,5 +1,5 @@
 <template>
-  <section style="color: #FFFFFF" class="container">
+  <section class="container portfolio-wrapper">
     <nav class="portfolio-nav">
       <ul class="portfolio-nav__list">
         <li
@@ -8,32 +8,58 @@
             :key="item.id"
             @click="openTab(item.id)"
         >
-          <p>{{item.title}}</p>
-          <p class="closed" :class="{opened: item.id === selectedProjectID}">{{item.text}}</p>
+          {{item.title}}
         </li>
       </ul>
     </nav>
-<!--    <ProjectItem :project="worksList[selectedProjectID]" :opened="isOpen"/>-->
+
+    <div class="portfolio">
+      <ul class="portfolio__list">
+        <li
+            class="portfolio__list-item"
+            v-for="item in worksList"
+            :key="item.id"
+            @click="openTab(item.id)"
+        >
+          <p
+              class="portfolio__title"
+              :class="{active: item.id === selectedProjectID}"
+          >
+            {{item.title}}
+            <i class="fa fa-chevron-down"></i>
+          </p>
+
+          <div class="hidden-content" :class="{active: item.id === selectedProjectID}">
+            <ul class="project-item__list">
+              <li class="project-item__item" v-for="item in item.text">
+                <p class="paragraph">{{item}}</p>
+              </li>
+            </ul>
+            <div>
+              <p>Demo</p>
+              <img class="demo-img" :src="`/src/assets/gif/${item.img_url}.gif`" alt="">
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
   </section>
 </template>
 
 <script setup>
 import {ref} from "vue";
-import ProjectItem from "../components/ProjectItem.vue";
 
-const selectedProjectID = ref(0)
+const selectedProjectID = ref(1)
 const isOpen = ref(false)
 
 const openTab = (itemID) => {
   selectedProjectID.value = itemID
-  console.log(selectedProjectID.value)
   isOpen.value = !isOpen.value
-
 }
 
 const worksList = ref([
   {
-    id: 0,
+    id: 1,
     title: "Vue-Blog",
     img_url: "blog",
     text: [
@@ -44,40 +70,40 @@ const worksList = ref([
     ]
   },
   {
-    id: 1,
+    id: 2,
     title: "Advance",
     img_url: "blog",
-    text: "Advance"
-  },
-  {
-    id: 2,
-    title: "Eda1",
-    img_url: "blog",
-    text: "Eda1"
+    text: ["Advance"]
   },
   {
     id: 3,
-    title: "NASA",
+    title: "Eda1",
     img_url: "blog",
-    text: "NASA"
+    text: ["Eda1"]
   },
   {
     id: 4,
-    title: "Books",
+    title: "NASA",
     img_url: "blog",
-    text: "Books"
+    text: ["NASA"]
   },
   {
     id: 5,
-    title: "GitHub users",
+    title: "Books",
     img_url: "blog",
-    text: "GitHub"
+    text: ["Books"]
   },
   {
     id: 6,
+    title: "GitHub users",
+    img_url: "blog",
+    text: ["GitHub"]
+  },
+  {
+    id: 7,
     title: "Trello",
     img_url: "blog",
-    text: ""
+    text: ["Trello"]
   },
 ])
 </script>
