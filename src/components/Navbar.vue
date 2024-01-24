@@ -36,7 +36,7 @@ const navLinks = ref([
   },
   {
     name: "Навыки",
-    path: "/kills"
+    path: "/skills"
   },
   {
     name: "Контакты",
