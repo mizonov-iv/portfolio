@@ -1,17 +1,5 @@
 <template>
-  <section class="skills-section">
-<!--    <header class="skills-header">-->
-<!--      <h2>Skills</h2>-->
-<!--    </header>-->
-<!--    <main>-->
-<!--      <ul class="skills-list">-->
-<!--        <li class="skills-list-item" v-for="icon in icons" :key="icon.id">-->
-<!--          <img class="raise" :src="icon.icon_url"  :alt="icon.title"/>-->
-<!--          <p class="card-text-bold">{{icon.title}}</p>-->
-<!--        </li>-->
-<!--      </ul>-->
-<!--    </main>-->
-
+  <section class="container skills-section">
     <div class="swiper slider">
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="icon in icons">
@@ -19,9 +7,7 @@
         </div>
       </div>
     </div>
-
   </section>
-
 </template>
 
 <script setup>
@@ -77,7 +63,7 @@ function initSwiper () {
 
 <style>
 .swiper {
-  width: 80%;
+  width: 100%;
   height: 100%;
 }
 
@@ -85,6 +71,7 @@ function initSwiper () {
   background-position: center;
   background-size: cover;
   width: 250px;
+  border: 1px solid var(--base-color);
 }
 
 .swiper-slide img {

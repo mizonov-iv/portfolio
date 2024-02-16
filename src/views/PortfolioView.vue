@@ -35,10 +35,12 @@
                 <p class="paragraph">{{item}}</p>
               </li>
             </ul>
-            <div>
-              <p>Demo</p>
-              <img class="demo-img" :src="`/src/assets/gif/${item.img_url}.gif`" alt="">
-            </div>
+            <p @click="openDemo">Demo</p>
+            <img
+                class="demo-img" :src="`/src/assets/gif/${item.img_url}.gif`"
+                :alt="item.title"
+                v-show="demoIsOpen"
+            >
           </div>
         </li>
       </ul>
@@ -51,10 +53,15 @@ import {ref} from "vue";
 
 const selectedProjectID = ref(1)
 const isOpen = ref(false)
+const demoIsOpen = ref(false)
 
 const openTab = (itemID) => {
   selectedProjectID.value = itemID
   isOpen.value = !isOpen.value
+}
+
+const openDemo = () => {
+  demoIsOpen.value = !demoIsOpen.value
 }
 
 const worksList = ref([
